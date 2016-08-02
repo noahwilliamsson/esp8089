@@ -242,15 +242,6 @@ int sip_parse_events(struct esp_sip *sip, u8 * buf)
 			if (*len
 			    && sip->epub->sdio_state ==
 			    ESP_SDIO_STATE_FIRST_INIT) {
-				char filename[256];
-				if (mod_eagle_path_get() == NULL)
-					sprintf(filename, "%s/%s", FWPATH,
-						"test_results");
-				else
-					sprintf(filename, "%s/%s",
-						mod_eagle_path_get(),
-						"test_results");
-//                      esp_readwrite_file(filename, NULL, test_res_str, strlen(test_res_str));
 				esp_dbg(ESP_DBG_TRACE,
 					"SNPRINTF TO HOST: %s\n",
 					test_res_str);
