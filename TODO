@@ -2,10 +2,6 @@ TODO:
 
 	- esp_file.c should probably be renamed since it only deals with
 	  initial chip configuration data, and not file ops in kernel space
-	- TX A-MPDU aggregation is broken in icenowy/esp8089 (at least ESP8266
-	  needs no_txampdu=1).  For unknown reasons it works in al177/esp8089.
-	- RX A-MPDU aggregation seems to lose a packet (or more?) every time
-	  esp_op_ampdu_action() is called with IEEE80211_AMPDU_RX_START
 	- firmware filenames are off by one (ESP_FW_NAME1 should really be
 	  called eagle_fw_first_init_v19.bin)
 	- kill references to TEST_MODE
